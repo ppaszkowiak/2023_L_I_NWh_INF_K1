@@ -1,10 +1,10 @@
-deps: 
-	pip install -r requirements.txt; \
+deps:
+	pip install -r requirements.txt;
 	pip install -r test_requirements.txt
-lint: 
+lint:
 	flake8 hello_world test
 run:
 	python main.py
-.PHONYY: test
+.PHONY: test
 test:
-	PYTHONPATH=.py.test --verbose -a
+	PYTHONPATH=. py.test --verbose -s
